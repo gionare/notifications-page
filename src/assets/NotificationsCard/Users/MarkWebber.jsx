@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "../NotificationsCard";
 import MarkWebberAvatar from "/images/avatar-mark-webber.webp";
 
-export default function MarkWebber({ handleNotification }) {
+export default function MarkWebber({ count, setCount }) {
+  const [isRead, setIsRead] = useState(false);
+
+  function handleNotification() {
+    setIsRead(!isRead);
+    // Decrease count if notification is false
+    if (!isRead) {
+      setCount(count - 1);
+    }
+  }
+
   return (
-    <div className="user-div" onClick={handleNotification}>
+    <div
+      onClick={handleNotification}
+      className={`user-div ${!isRead ? "" : "notification-opened"} `}
+    >
       <div className="user-avatar-div">
         <img src={MarkWebberAvatar} alt="MarkWebber" className="user-avatar" />
       </div>

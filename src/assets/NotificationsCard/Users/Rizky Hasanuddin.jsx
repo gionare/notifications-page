@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "../NotificationsCard";
 import RizkyHasanuddinAvatar from "/images/avatar-rizky-hasanuddin.webp";
 
-export default function RizkyHasanuddin() {
+export default function RizkyHasanuddin({ count, setCount }) {
+  const [isRead, setIsRead] = useState(false);
+
+  function handleNotification() {
+    setIsRead(!isRead);
+    // Decrease count if notification is false
+    if (!isRead && count > 0) {
+      setCount(count - 1);
+    }
+  }
+
   return (
-    <div className="user-div">
+    <div
+      onClick={handleNotification}
+      className={`user-div ${!isRead ? "" : "notification-opened"} `}
+    >
       <div className="user-avatar-div">
         <img
           src={RizkyHasanuddinAvatar}

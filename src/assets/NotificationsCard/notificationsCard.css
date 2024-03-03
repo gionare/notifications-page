@@ -151,3 +151,8 @@
   text-align: left;
   color: #939cad;
 }
+
+/* HANDLE ACTIONS */
+.notification-opened {
+  background-color: white;
+}

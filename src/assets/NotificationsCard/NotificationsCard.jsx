@@ -9,31 +9,29 @@ import NathanPeterson from "./Users/NathanPeterson";
 import AnnaKim from "./Users/AnnaKim";
 
 export default function NotificationsCard() {
-  let isRead = "true";
-  const [notification, setNotification] = useState(true);
+  const [count, setCount] = useState(7);
+  const [readAll, setReadAll] = useState(false);
 
-  function handleNotification() {
-    setNotification(!notification);
-  }
+  function handleMarkAllAsRead() {}
 
   return (
     <div className="card">
       <div className="header">
         <h3 className="notifications">Notifications</h3>
         <div className="rectangle">
-          <span>3</span>
+          <span>{count}</span>
         </div>
         <span className="mark-all-as-read">Mark all as read</span>
       </div>
 
       <div className="main">
-        <MarkWebber handleNotification={handleNotification} />
-        <AngelaGray />
-        <JacobThompson />
-        <RizkyHasanuddin />
-        <KimberlySmith />
-        <NathanPeterson />
-        <AnnaKim />
+        <MarkWebber count={count} setCount={setCount} />
+        <AngelaGray count={count} setCount={setCount} />
+        <JacobThompson count={count} setCount={setCount} />
+        <RizkyHasanuddin count={count} setCount={setCount} />
+        <KimberlySmith count={count} setCount={setCount} />
+        <NathanPeterson count={count} setCount={setCount} />
+        <AnnaKim count={count} setCount={setCount} />
       </div>
     </div>
   );

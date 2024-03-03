@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "../NotificationsCard";
 import AnnaKimAvatar from "/images/avatar-anna-kim.webp";
 
-export default function AnnaKim() {
+export default function AnnaKim({ count, setCount }) {
+  const [isRead, setIsRead] = useState(false);
+
+  function handleNotification() {
+    setIsRead(!isRead);
+    // Decrease count if notification is false
+    if (!isRead) {
+      setCount(count - 1);
+    }
+  }
+
   return (
-    <div className="user-div">
+    <div
+      onClick={handleNotification}
+      className={`user-div ${!isRead ? "" : "notification-opened"} `}
+    >
       <div className="user-avatar-div">
         <img src={AnnaKimAvatar} alt="MarkWebber" className="user-avatar" />
       </div>

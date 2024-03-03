@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "../NotificationsCard";
 import NathanPetersonAvatar from "/images/avatar-nathan-peterson.webp";
 
-export default function NathanPeterson() {
+export default function NathanPeterson({ count, setCount }) {
+  const [isRead, setIsRead] = useState(false);
+
+  function handleNotification() {
+    setIsRead(!isRead);
+    // Decrease count if notification is false
+    if (!isRead) {
+      setCount(count - 1);
+    }
+  }
+
   return (
-    <div className="user-div">
+    <div
+      onClick={handleNotification}
+      className={`user-div ${!isRead ? "" : "notification-opened"} `}
+    >
       <div className="user-avatar-div">
         <img
           src={NathanPetersonAvatar}
