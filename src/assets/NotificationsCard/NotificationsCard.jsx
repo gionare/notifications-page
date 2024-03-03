@@ -10,6 +10,11 @@ import AnnaKim from "./Users/AnnaKim";
 
 export default function NotificationsCard() {
   let isRead = "true";
+  const [notification, setNotification] = useState(true);
+
+  function handleNotification() {
+    setNotification(!notification);
+  }
 
   return (
     <div className="card">
@@ -22,7 +27,7 @@ export default function NotificationsCard() {
       </div>
 
       <div className="main">
-        <MarkWebber />
+        <MarkWebber handleNotification={handleNotification} />
         <AngelaGray />
         <JacobThompson />
         <RizkyHasanuddin />

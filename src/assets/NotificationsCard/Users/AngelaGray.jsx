@@ -10,7 +10,8 @@ export default function AngelaGray() {
       </div>
       <div className="user-div-letters">
         <span className="user-name">Angela Gray</span>
-        <span className="interactive-message">followed you</span>
+        <span className="interactive-message">followed you </span>
+        <div className="Oval"></div>
         <span className="time-ago">
           <br />
           5m ago

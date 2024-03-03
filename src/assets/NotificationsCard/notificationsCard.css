@@ -123,6 +123,24 @@
   text-align: left;
   color: #0a327b;
 }
+.reaction-content {
+  width: 182px;
+  height: 18px;
+  margin: 18px 6px 0;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  color: #5e6778;
+}
+.Oval {
+  display: inline-block; /* Ensures the span behaves like a block-level element */
+  width: 8px;
+  height: 8px;
+  /* margin: 6px 10px 6px 6px; */
+  margin-left: 6px;
+  border-radius: 50%;
+  background-color: #f65552;
+}
 
 .time-ago {
   width: 47px;

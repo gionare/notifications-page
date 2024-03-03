@@ -16,7 +16,7 @@ export default function NathanPeterson() {
       <div className="user-div-letters">
         <span className="user-name">Nathan Peterson</span>
         <span className="interactive-message">reacted to your recent post</span>
-        <span className="Chess-Club">
+        <span className="reaction-content">
           5 end-game strategies to increase your win rate
         </span>
         <span className="time-ago">
