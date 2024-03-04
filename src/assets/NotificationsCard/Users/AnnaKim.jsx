@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../NotificationsCard";
 import AnnaKimAvatar from "/images/avatar-anna-kim.webp";
+import { StyledUserNames } from "../../../styled-components/StyledUserNames";
 
 export default function AnnaKim({ count, setCount }) {
   const [isRead, setIsRead] = useState(false);
@@ -8,7 +9,7 @@ export default function AnnaKim({ count, setCount }) {
   function handleNotification() {
     setIsRead(!isRead);
     // Decrease count if notification is false
-    if (!isRead) {
+    if (!isRead && count > 0) {
       setCount(count - 1);
     }
   }
@@ -22,7 +23,7 @@ export default function AnnaKim({ count, setCount }) {
         <img src={AnnaKimAvatar} alt="MarkWebber" className="user-avatar" />
       </div>
       <div className="user-div-letters">
-        <span className="user-name">Jacob Thompson</span>
+        <StyledUserNames className="">Anna Kim</StyledUserNames>
         <span className="interactive-message">left the group</span>
         <span className="group">Chess Club</span>
         <span className="time-ago">

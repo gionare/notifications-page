@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../NotificationsCard";
 import NathanPetersonAvatar from "/images/avatar-nathan-peterson.webp";
+import { StyledUserNames } from "../../../styled-components/StyledUserNames";
 
 export default function NathanPeterson({ count, setCount }) {
   const [isRead, setIsRead] = useState(false);
@@ -8,7 +9,7 @@ export default function NathanPeterson({ count, setCount }) {
   function handleNotification() {
     setIsRead(!isRead);
     // Decrease count if notification is false
-    if (!isRead) {
+    if (!isRead && count > 0) {
       setCount(count - 1);
     }
   }
@@ -27,7 +28,7 @@ export default function NathanPeterson({ count, setCount }) {
       </div>
 
       <div className="user-div-letters">
-        <span className="user-name">Nathan Peterson</span>
+        <StyledUserNames className="user-name">Nathan Peterson</StyledUserNames>
         <span className="interactive-message">reacted to your recent post</span>
         <span className="reaction-content">
           5 end-game strategies to increase your win rate

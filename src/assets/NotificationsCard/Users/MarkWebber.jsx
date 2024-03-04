@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../NotificationsCard";
 import MarkWebberAvatar from "/images/avatar-mark-webber.webp";
+import { StyledUserNames } from "../../../styled-components/StyledUserNames";
 
 export default function MarkWebber({ count, setCount }) {
   const [isRead, setIsRead] = useState(false);
@@ -8,7 +9,7 @@ export default function MarkWebber({ count, setCount }) {
   function handleNotification() {
     setIsRead(!isRead);
     // Decrease count if notification is false
-    if (!isRead) {
+    if (!isRead && count > 0) {
       setCount(count - 1);
     }
   }
@@ -23,7 +24,8 @@ export default function MarkWebber({ count, setCount }) {
       </div>
 
       <div className="user-div-letters">
-        <span className="user-name">Mark Webber</span>
+        <StyledUserNames>Mark Webber</StyledUserNames>
+
         <span className="interactive-message">reacted to your recent post</span>
         <span className="reaction-content">My first tournament today!</span>
         <div className="Oval"></div>

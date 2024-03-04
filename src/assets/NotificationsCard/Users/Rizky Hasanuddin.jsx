@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../NotificationsCard";
 import RizkyHasanuddinAvatar from "/images/avatar-rizky-hasanuddin.webp";
+import { StyledUserNames } from "../../../styled-components/StyledUserNames";
 
 export default function RizkyHasanuddin({ count, setCount }) {
   const [isRead, setIsRead] = useState(false);
@@ -26,7 +27,9 @@ export default function RizkyHasanuddin({ count, setCount }) {
         />
       </div>
       <div className="user-div-letters">
-        <span className="user-name">Rizky Hasanuddin</span>
+        <StyledUserNames className="user-name">
+          Rizky Hasanuddin
+        </StyledUserNames>
         <span className="interactive-message">sent you a private message</span>
         <span className="time-ago">
           <br />5 days ago

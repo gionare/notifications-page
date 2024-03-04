@@ -12,7 +12,7 @@ export default function NotificationsCard() {
   const [count, setCount] = useState(7);
   const [readAll, setReadAll] = useState(false);
 
-  function handleMarkAllAsRead() {}
+  function handleReadAll() {}
 
   return (
     <div className="card">

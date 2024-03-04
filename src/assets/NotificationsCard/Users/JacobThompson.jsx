@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../NotificationsCard";
 import JacobThompsonAvatar from "/images/avatar-jacob-thompson.webp";
+import { StyledUserNames } from "../../../styled-components/StyledUserNames";
 
 export default function JacobThompson({ count, setCount }) {
   const [isRead, setIsRead] = useState(false);
@@ -8,7 +9,7 @@ export default function JacobThompson({ count, setCount }) {
   function handleNotification() {
     setIsRead(!isRead);
     // Decrease count if notification is false
-    if (!isRead) {
+    if (!isRead && count > 0) {
       setCount(count - 1);
     }
   }
@@ -26,7 +27,7 @@ export default function JacobThompson({ count, setCount }) {
         />
       </div>
       <div className="user-div-letters">
-        <span className="user-name">Jacob Thompson</span>
+        <StyledUserNames className="user-name">Jacob Thompson</StyledUserNames>
         <span className="interactive-message">has joined your group</span>
         <span className="group">Chess Club</span>
         <span className="time-ago">

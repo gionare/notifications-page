@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../NotificationsCard";
 import KimberlySmithAvatar from "/images/avatar-kimberly-smith.webp";
+import { StyledUserNames } from "../../../styled-components/StyledUserNames";
 
 export default function KimberlySmith({ count, setCount }) {
   const [isRead, setIsRead] = useState(false);
@@ -8,7 +9,7 @@ export default function KimberlySmith({ count, setCount }) {
   function handleNotification() {
     setIsRead(!isRead);
     // Decrease count if notification is false
-    if (!isRead) {
+    if (!isRead && count > 0) {
       setCount(count - 1);
     }
   }
@@ -26,7 +27,7 @@ export default function KimberlySmith({ count, setCount }) {
         />
       </div>
       <div className="user-div-letters">
-        <span className="user-name">KImberly Smith</span>
+        <StyledUserNames className="user-name">KImberly Smith</StyledUserNames>
         <span className="interactive-message">commented on your picture</span>
         <span className="time-ago">
           <br />1 week ago
