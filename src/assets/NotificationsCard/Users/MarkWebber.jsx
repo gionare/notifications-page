@@ -1,8 +1,3 @@
-import React, { useState } from "react";
-import "../NotificationsCard";
-import MarkWebberAvatar from "/images/avatar-mark-webber.webp";
-import { StyledUserNames } from "../../../styled-components/StyledUserNames";
-
 export default function MarkWebber({ count, setCount }) {
   const [isRead, setIsRead] = useState(false);
 

@@ -14,13 +14,12 @@ const StyledHeader = styled.div`
     margin: 0 9px 0 0;
     font-size: 20px;
     font-weight: 800;
-
     text-align: left;
     color: #1c202b;
   }
 
   .header .rectangle {
-    padding: 1px 11px 4px;
+    padding: 4px 11px 2px;
     border-radius: 6px;
     background-color: #0a327b;
     color: #fff;
@@ -37,6 +36,14 @@ const StyledHeader = styled.div`
     text-align: right;
     color: #5e6778;
     /* border: solid; */
+  }
+  .mark-all-as-read:hover {
+    color: #0a327b;
+    background-color: #dfe7f2;
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    text-align: center;
   }
 `;
 

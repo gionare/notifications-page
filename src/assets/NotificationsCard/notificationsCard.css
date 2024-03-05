@@ -96,7 +96,7 @@
   color: #5e6778;
 }
 .Oval {
-  display: inline-block; /* Ensures the span behaves like a block-level element */
+  display: inline-block;
   width: 8px;
   height: 8px;
   /* margin: 6px 10px 6px 6px; */
@@ -104,15 +104,17 @@
   border-radius: 50%;
   background-color: #f65552;
 }
+.Oval.read {
+  display: none;
+}
 
 .time-ago {
-  width: 47px;
-  height: 18px;
   margin: 3px 202px 0 0;
   font-size: 14px;
   font-weight: 500;
   text-align: left;
   color: #939cad;
+  /* display: block; */
 }
 
 /* HANDLE ACTIONS */
