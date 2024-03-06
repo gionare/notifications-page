@@ -5,7 +5,8 @@ const StyledHeader = styled.div`
   .header {
     display: flex;
     flex-direction: row;
-    margin-bottom: 15px;
+    align-items: center;
+    margin: 0 20px 15px;
   }
 
   .notifications {

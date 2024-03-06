@@ -1,17 +1,18 @@
 .card {
   width: 375px;
-  height: 901px;
-  flex-grow: 0;
+  min-height: 800px;
+  border-radius: 12px;
   padding: 24px 16px 29px;
-  background-color: #fff;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* MAIN */
 .main {
   display: flex;
   flex-direction: column;
+  align-items: left;
   gap: 10px;
-  /* background-color: red; */
 }
 
 /* EACH USER */
@@ -19,89 +20,58 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   align-items: flex-start;
   gap: 10px;
-  flex-grow: 0;
-  padding: 10px 12px 10px 10px;
   border-radius: 8px;
   background-color: #f1fafd;
-  /* width: 350px; */
-  /* border: solid black; */
+  padding: 10px 12px 10px 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 .user-avatar-div {
   width: 45px;
   height: 45px;
-  /* border: solid black; */
 }
 .user-avatar {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  flex-shrink: 0;
 }
 .user-div-letters {
-  display: inline-block;
-  padding: 0 2px 0;
   width: 80%;
-  /* border: solid black; */
+  padding: 0 2px 0;
+  display: inline-block;
 }
-/* .user-name {
-  width: 93px;
-  height: 18px;
-  margin: 0 5px 0;
-  font-size: 14px;
-  font-weight: 800;
-  text-align: left;
-  color: #1c202b;
-} */
 .interactive-message {
-  width: 149px;
-  height: 18px;
   font-size: 14px;
   font-weight: 500;
   text-align: left;
   color: #5e6778;
 }
 .message-content {
-  width: 231px;
-  height: 90px;
-  margin: 15px 6px 0;
   padding: 10px;
   font-size: 14px;
-  font-weight: 500;
-  font-weight: bold;
-  text-align: left;
   color: #5e6778;
+  text-align: left;
+  font-weight: bold;
+  margin: 6px 6px 0;
   border-radius: 5px;
   border: solid 1px #dde7ee;
   background-color: #fff;
-}
-.group {
-  width: 77px;
-  height: 18px;
-  margin: 18px 6px 0;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: left;
-  color: #0a327b;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
 .reaction-content {
-  width: 182px;
-  height: 18px;
-  margin: 18px 6px 0;
   font-size: 14px;
-  font-weight: bold;
-  text-align: left;
   color: #5e6778;
+  text-align: left;
+  font-weight: bold;
+  margin: 18px 6px 0;
 }
 .Oval {
-  display: inline-block;
   width: 8px;
   height: 8px;
-  /* margin: 6px 10px 6px 6px; */
   margin-left: 6px;
   border-radius: 50%;
+  display: inline-block;
   background-color: #f65552;
 }
 .Oval.read {
@@ -109,15 +79,27 @@
 }
 
 .time-ago {
-  margin: 3px 202px 0 0;
   font-size: 14px;
   font-weight: 500;
   text-align: left;
   color: #939cad;
-  /* display: block; */
+  margin: 3px 202px 0 0;
 }
 
 /* HANDLE ACTIONS */
 .notification-opened {
   background-color: white;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 768px) {
+  /* Desktop styles */
+  .card {
+    width: 730px;
+  }
+
+  .user-div {
+    width: 670px;
+  }
 }
